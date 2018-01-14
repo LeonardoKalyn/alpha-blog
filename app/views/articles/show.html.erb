@@ -1,6 +1,18 @@
 <div class='card col-10 offset-1 mt-3'>
   <div class='card-header'>
     <h2 align='center'><%= @article.title %></h2>
+    <ul class='listing'>
+      <div class='row center'>
+        <div class='col-md-4 offset-md-4'>
+          <li>Created by:</li>
+          <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+          <li class='article-title'>
+            <%= link_to @article.user.username, user_path(@article.user) %>
+          </li>
+          <li><small><%= pluralize(@article.user.articles.count, 'artile') if @article.user.articles %></small></li>
+        </div>
+      </div>
+    </ul>
   </div>
   <div class='card-body'>
     <%= simple_format(@article.description) %>
