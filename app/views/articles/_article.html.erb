@@ -13,14 +13,16 @@
             </small>
           </div>
         </div>
-        <div class='card-footer'>
-          <div class='btn btn-group'>
-            <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-primary' %>
-            <%= link_to 'Delete', article_path(article), method: :delete,
-                                    data: {confirm: "Are you sure?"},
-                                    class: 'btn btn-sm btn-danger' %>
+        <% if logged_in? && current_user == article.user %>
+          <div class='card-footer'>
+            <div class='btn btn-group'>
+              <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Delete', article_path(article), method: :delete,
+                                      data: {confirm: "Are you sure?"},
+                                      class: 'btn btn-sm btn-danger' %>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
