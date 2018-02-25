@@ -18,6 +18,11 @@ $light: hsl(280, 100%, 80%);
 
 .center {
   text-align: center;
+  
+  &-box {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .jumbotron {
@@ -46,7 +51,17 @@ $light: hsl(280, 100%, 80%);
 .listing {
   list-style: none;
   padding-left: 0;
+}
+
+.badge-category {
+  background-color: #cc99ff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
   
+  a {
+    color: white;
+  }
 }
 
 .footer {

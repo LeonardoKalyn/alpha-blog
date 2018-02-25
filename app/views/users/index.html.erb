@@ -1,6 +1,8 @@
 <h1 align='center'>All Alpha-Bloggers</h1>
 <div align='center'>
-  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+  <div class="center-box">
+    <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+  </div>
   <% @users.each do |user| %>
     <ul class='listing'>
       <div class='row'>

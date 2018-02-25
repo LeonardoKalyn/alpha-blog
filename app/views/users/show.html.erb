@@ -6,10 +6,10 @@
   </div>
 </div>
 <h4 align="center"><%= @user.username %>'s articles</h4>
-<div align="center">
+<div class="center-box">
   <%= will_paginate @user_articles, renderer: BootstrapPagination::Rails %>
 </div>
 <%= render 'articles/article', obj: @user_articles %>
-<div align="center">
+<div class="center-box">
   <%= will_paginate @user_articles, renderer: BootstrapPagination::Rails %>
 </div>
