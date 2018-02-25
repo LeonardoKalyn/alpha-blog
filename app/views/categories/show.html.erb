@@ -1,5 +1,10 @@
 <h1 align='center'><%= "Category: " + @category.name %></h1>
 <div class='center-box'>
+  <% if logged_in? and current_user.admin? %>
+    <div class="row">
+      <span class="badge badge-category"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
+    </div>
+  <% end %>
   <%= will_paginate @category_articles, :renderer => BootstrapPagination::Rails %>
 </div>
 <%= render 'articles/article', obj: @category_articles %>

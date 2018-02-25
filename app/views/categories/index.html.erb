@@ -1,11 +1,11 @@
 <h1 align="center">Listing All Categories</h1>
 <div align="center">
-  <div class="centr-box">
+  <div class="center-box">
     <%= will_paginate %>
   </div>
   <% @categories.each do |category| %>
     <div class="row">
-      <div class="col-md-4 offset-md-4 card text-center bg-light">
+      <div class="col-md-4 offset-md-4 card mb-3 text-center bg-light">
         <div class= "card-body">
           <%= link_to "#{category.name}", category_path(category) %>
         </div>
@@ -15,7 +15,7 @@
       </div>
     </div>
   <% end %>
-  <div class="centr-box">
+  <div class="center-box">
     <%= will_paginate %>
   </div>
 </div>
